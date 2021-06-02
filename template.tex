@@ -1,0 +1,16 @@
+\documentclass{article}
+\usepackage{pdfpages}
+\usepackage{geometry}
+\geometry{margin=0in}
+\usepackage{tikz}
+
+\begin{document}
+\includepdf[pages=-,noautoscale=true,scale=1.1,offset=-100 0,
+	pagecommand={
+			\resizebox{1\paperwidth}{!}{%
+				\begin{tikzpicture}
+					\draw[opacity=0] (-100,-100) rectangle (100,155);
+					\draw [help lines,xstep=0,ystep=5] (37,-100) grid(92,155);%
+				\end{tikzpicture}}
+		}]{test_target.pdf}
+\end{document}
